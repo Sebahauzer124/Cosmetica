@@ -6,10 +6,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PersonaComponent } from './Components/persona/persona.component';
+import { ProductoComponent } from './Components/producto/producto.component';
+import { NuevaPersonaComponent } from './Components/persona/nueva-persona/nueva-persona.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    PersonaComponent
+    PersonaComponent,
+    ProductoComponent,
+    NuevaPersonaComponent,
+  
   ],
   imports: [
     BrowserModule,

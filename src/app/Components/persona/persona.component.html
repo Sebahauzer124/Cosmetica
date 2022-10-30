@@ -1,1 +1,31 @@
-<p>persona works!</p>
+<div class="row">
+    <h1>Clientes</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaedu">
+            Agregar Nuevo cliente
+        </button>
+    </div>
+
+    <div class="col lg 1"></div>
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let persona of persona">
+                    <td>
+                        <h2>{{persona.nombre}}</h2>
+                    </td>
+                    <td>{{persona.apellido}}</td>
+                    <td>
+                        <button class="btn btn-light" routerLink="/editar/{{persona.id}}">
+                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" (click)="delete(persona.id)">
+                            <i class="bi bi-trash-fill"></i> BORRAR</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
