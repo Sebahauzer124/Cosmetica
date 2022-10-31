@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PersonaComponent } from './Components/persona/persona.component';
 import { ProductoComponent } from './Components/producto/producto.component';
 import { NuevaPersonaComponent } from './Components/persona/nueva-persona/nueva-persona.component';
+import { EditarPersonaComponent } from './Components/persona/editar-persona/editar-persona.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { NuevaPersonaComponent } from './Components/persona/nueva-persona/nueva-
     PersonaComponent,
     ProductoComponent,
     NuevaPersonaComponent,
+    EditarPersonaComponent,
   
   ],
   imports: [

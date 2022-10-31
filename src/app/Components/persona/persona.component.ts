@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Persona } from 'src/app/Models/Persona';
 import { PersonaService } from 'src/app/Service/persona.service';
 
@@ -13,7 +14,9 @@ export class PersonaComponent implements OnInit {
 
   persona: Persona[] = [];
 
-  constructor(private service: PersonaService) { }
+  constructor(private service: PersonaService,
+    private activatedRouter : ActivatedRoute,
+    private router: Router) { }
 
 
   ngOnInit(): void {

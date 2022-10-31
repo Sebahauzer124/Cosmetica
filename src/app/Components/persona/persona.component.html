@@ -1,7 +1,7 @@
 <div class="row">
     <h1>Clientes</h1>
     <div class="col-lg-2">
-        <button type="button" class="btn btn-dark" routerLink="/nuevaedu">
+        <button type="button" class="btn btn-dark" routerLink="/nuevapersona">
             Agregar Nuevo cliente
         </button>
     </div>
@@ -10,17 +10,17 @@
     <div class="col-lg-11">
         <table class="table">
             <tbody>
-                <tr *ngFor="let persona of persona">
+                <tr *ngFor="let Persona of persona">
                     <td>
-                        <h2>{{persona.nombre}}</h2>
+                        <h2>{{Persona.nombre}}</h2>
                     </td>
-                    <td>{{persona.apellido}}</td>
+                    <td>{{Persona.apellido}}</td>
                     <td>
-                        <button class="btn btn-light" routerLink="/editar/{{persona.id}}">
+                        <button class="btn btn-light" routerLink="/editarpersona/{{Persona.id}}">
                             <i class="bi bi-pencil-fill"></i> EDITAR</button>
                     </td>
                     <td>
-                        <button class="btn btn-danger" (click)="delete(persona.id)">
+                        <button class="btn btn-danger" (click)="delete(Persona.id)">
                             <i class="bi bi-trash-fill"></i> BORRAR</button>
                     </td>
                 </tr>
