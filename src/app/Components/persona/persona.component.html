@@ -1,6 +1,6 @@
 <div class="row">
-    <h1>Clientes</h1>
     <div class="col-lg-2">
+        <h1>Clientes</h1>
         <button type="button" class="btn btn-dark" routerLink="/nuevapersona">
             Agregar Nuevo cliente
         </button>
@@ -10,11 +10,24 @@
     <div class="col-lg-11">
         <table class="table">
             <tbody>
-                <tr *ngFor="let Persona of persona">
-                    <td>
-                        <h2>{{Persona.nombre}}</h2>
-                    </td>
+                <tr>
+                    <td><h5>Nombre</h5></td>
+                    <td><h5>Apellido</h5></td>
+                    <td><h5>Dni</h5></td>
+                    <td><h5>Dirección</h5></td>
+                    <td><h5>Nacionalidad</h5></td>
+                    <td><h5>Provincia</h5></td>
+                    <td><h5>Localidad</h5></td>
+                </tr>
+                <tr 
+                *ngFor="let Persona of persona" >
+                    <td>{{Persona.nombre}} </td>
                     <td>{{Persona.apellido}}</td>
+                    <td>{{Persona.dni}}</td>
+                    <td>{{Persona.direccion}}</td>
+                    <td>{{Persona.nacionalidad}}</td>
+                    <td>{{Persona.provincia}}</td>
+                    <td>{{Persona.localidad}}</td>
                     <td>
                         <button class="btn btn-light" routerLink="/editarpersona/{{Persona.id}}">
                             <i class="bi bi-pencil-fill"></i> EDITAR</button>

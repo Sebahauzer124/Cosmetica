@@ -13,7 +13,13 @@ export class EditarPersonaComponent implements OnInit {
 
  nombre!:String;
  apellido!:String;
-  persona = new Persona(this.nombre,this.apellido);
+ dni!:String;
+direccion!:String;
+nacionalidad!:String;
+provincia!:String;
+localidad!:String;
+
+  persona = new Persona(this.nombre,this.apellido,this.dni,this.direccion, this.nacionalidad,this.provincia,this.localidad);
   constructor(
     private service: PersonaService,
     private activatedRouter : ActivatedRoute,

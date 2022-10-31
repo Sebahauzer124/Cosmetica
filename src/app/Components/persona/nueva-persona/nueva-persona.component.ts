@@ -10,7 +10,12 @@ import { PersonaService } from 'src/app/Service/persona.service';
 export class NuevaPersonaComponent implements OnInit {
   nombre!:String;
 apellido!:String;
-  
+dni!:String;
+direccion!:String;
+nacionalidad!:String;
+provincia!:String;
+localidad!:String;
+
   constructor(  private service :PersonaService,
     private router: Router) { }
 
@@ -19,7 +24,7 @@ apellido!:String;
   }
 
   onCreate(): void{
-    const persona = new Persona(this.nombre,this.apellido);
+    const persona = new Persona(this.nombre,this.apellido,this.dni,this.direccion, this.nacionalidad,this.provincia,this.localidad);
     this.service.save(persona).subscribe(
       data =>{
         alert("Cliente añadida correctamente");
