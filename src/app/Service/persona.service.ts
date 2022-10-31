@@ -31,7 +31,7 @@ export class PersonaService {
     }
   
     public delete(id: number): Observable<any>{
-      return this.http.delete<any>(this.URL + `delete/${id}`);
+      return this.http.delete<any>(this.URL + `borrar/${id}`);
     }
   
 }

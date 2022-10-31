@@ -38,16 +38,18 @@ export class PersonaComponent implements OnInit {
 
 
 
-  delete(id?: number){
+  delete(id: number){
     if( id != undefined){
       this.service.delete(id).subscribe(
         data => {
           this.cargarPersonas();
         }, err => {
-          alert("No se pudo eliminar");
+          alert("No se pudo eliminar")
+          console.log(err);
         }
       )
-    }
+    
   }
 
+}
 }
