@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Persona } from 'src/app/Models/Persona';
 import { PersonaService } from 'src/app/Service/persona.service';
+import { TokenService } from 'src/app/Service/token-service.service';
 
 @Component({
   selector: 'app-persona',
@@ -14,13 +15,21 @@ export class PersonaComponent implements OnInit {
 
   persona: Persona[] = [];
 
+  isLogged =false;
   constructor(private service: PersonaService,
     private activatedRouter : ActivatedRoute,
-    private router: Router) { }
+    private router: Router,private tokenService : TokenService) { }
 
-
+   
   ngOnInit(): void {
-    this.cargarPersonas();
+    if(this.tokenService.getToken()){
+      this.isLogged=true;
+      this.cargarPersonas();
+    }
+    else{
+      this.isLogged=false;
+    }
+ 
      
     }
  
@@ -52,4 +61,12 @@ export class PersonaComponent implements OnInit {
   }
 
 }
+onLogOut():void{
+  this.tokenService.logOut();
+  window.location.reload();
+}
+login(){
+this.router.navigate(['/login'])
+}
+
 }

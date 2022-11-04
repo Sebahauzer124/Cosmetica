@@ -9,6 +9,8 @@ import { PersonaComponent } from './Components/persona/persona.component';
 import { ProductoComponent } from './Components/producto/producto.component';
 import { NuevaPersonaComponent } from './Components/persona/nueva-persona/nueva-persona.component';
 import { EditarPersonaComponent } from './Components/persona/editar-persona/editar-persona.component';
+import { LoginComponent } from './Components/login/login.component';
+import { interceptorProvider } from './Service/interceptor-service.service';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { EditarPersonaComponent } from './Components/persona/editar-persona/edit
     ProductoComponent,
     NuevaPersonaComponent,
     EditarPersonaComponent,
+    LoginComponent,
   
   ],
   imports: [
@@ -27,7 +30,7 @@ import { EditarPersonaComponent } from './Components/persona/editar-persona/edit
     BrowserAnimationsModule,
    
   ],
-  providers: [],
+  providers: [interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -28,7 +28,7 @@ localidad!:String;
     this.service.save(persona).subscribe(
       data =>{
         alert("Cliente añadida correctamente");
-        this.router.navigate(['']);
+        this.router.navigate(['persona']);
       }, err =>{
         alert("falló");
         this.router.navigate(['']);
