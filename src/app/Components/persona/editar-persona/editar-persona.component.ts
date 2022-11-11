@@ -33,7 +33,7 @@ localidad!:String;
         this.persona = data;
       }, err =>{
          alert("Error al modificar");
-         this.router.navigate(['']);
+         this.router.navigate(['home']);
       }
     )
   }
@@ -43,10 +43,10 @@ localidad!:String;
     const id = this.activatedRouter.snapshot.params['id'];
     this.service.update(id, this.persona).subscribe(
       data => {
-        this.router.navigate(['']);
+        this.router.navigate(['home']);
       }, err => {
         alert("Error al modificar la persona");
-        this.router.navigate(['']);
+        this.router.navigate(['home']);
       }
     )
   }

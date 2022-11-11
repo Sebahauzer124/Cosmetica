@@ -40,7 +40,7 @@ errMsj!:string;
         this.tokenService.setUserName(data.nombreUsuario);
         this.tokenService.setAuthorities(data.authorities);
         this.roles=data.authorities;
-        this.router.navigate(['persona'])
+        this.router.navigate(['home'])
 
       },err=>{
         this.isLogged=false;

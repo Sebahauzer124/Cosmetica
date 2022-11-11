@@ -31,7 +31,7 @@ localidad!:String;
         this.router.navigate(['persona']);
       }, err =>{
         alert("falló");
-        this.router.navigate(['']);
+        this.router.navigate(['home']);
       }
     )
   }
