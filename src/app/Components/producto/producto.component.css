@@ -1,0 +1,78 @@
+
+
+.container{
+	
+	justify-content: space-between;
+	background-color: rgb(88, 145, 88);
+    padding: 60px; 
+	margin-left: 10px;}
+  
+.dropdown{
+    margin-left: 10px;
+    margin-block-end: 10px;
+}
+
+.row{
+    background-color: #171717;
+ 
+    
+    
+}
+.head{
+    background-color:white;
+    background: black;
+}
+
+.card{
+    display: inline-flex;
+    padding:10px;
+    margin-left: 25px;
+    background-color: rgb(245, 205, 205);
+    align-items: center; 
+    margin-top: 25px;
+   }
+
+  
+   .whatsapp {
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    z-index:100;
+  }
+  
+  .whatsapp-icon {
+    margin-top:13px;
+  }
+
+  .about {
+    background: #171717;
+}
+.content {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*--- Para la vista de celular ---*/
+
+@media (max-width: 575px){
+    .container{
+        flex-direction: column;
+    }
+    .redes{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .redes img{
+        margin: 0.2em;
+    }
+}

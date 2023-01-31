@@ -1,0 +1,51 @@
+<div class="row">
+  <div align="center">
+    <FONT COLOR="white"> <h2>Nuestros productos </h2></FONT>
+  </div>
+
+</div>
+
+
+    
+ 
+   
+
+          <div class="row">
+            <button  *ngIf="isLogged" type="button" class="btn btn-dark" routerLink="/nuevoproducto"  >Nuevo producto</button>
+            <div class="col-sm-3 col-md-3 col-lg-3" *ngFor="let Producto of producto">
+              <div class="card" style="width: 18rem;">
+              <img src="{{Producto.imagen}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title"><b>{{Producto.nombre}}</b></h4>
+                <p class="card-text">{{Producto.descripcion}}</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Precio :$ {{Producto.precio}}</li>
+                <a href="https://api.whatsapp.com/send?phone=543547477135&text=Me%20interesa%20el%20precio%20de" 
+                class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+              </ul>
+        
+            <tr>
+              <td *ngIf="isLogged" >
+                <button class="btn btn-light" routerLink="/editarproducto/{{Producto.id}}">
+                    <i class="bi bi-pencil-fill"></i> </button>
+            </td>
+            <td *ngIf="isLogged">
+                 <button class="btn btn-danger" (click)="delete(Producto.id)">
+                    <i class="bi bi-trash-fill"></i></button>
+            </td>
+
+            </tr>
+              
+              
+           
+              
+              
+          
+              
+            
+          </div>
+          
+            
+              </div>
+              </div>
