@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="container">
+        <div class="logo">
+            <img style="margin-left: 0px;" src='\assets\artilugios.jpg' id="logoAp"  class="img-fluid" >
+           
+    
+            <button style="margin-left: 20px;" type="button" class="btn btn-warning" (click)="productos()">Productos</button>
+              
+        </div>
+        
+        <div class="redes">
+            <a href="https://facebook.com/artilugioscn"><img  src="\assets\facebook.jpg" class="rounded-circle" ></a>
+            <a href="https://instagram.com/artilugioscn"><img   src="\assets\instagram.jpg" class="rounded-circle" ></a>
+            <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">INGRESO</button>
+            <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESION</button>
+        </div>
+    </div>
+</div>
+

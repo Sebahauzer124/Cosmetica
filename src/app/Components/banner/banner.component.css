@@ -1,0 +1,17 @@
+img{
+    width: 120%;
+    height: 600px;
+    align-items: center;
+}
+.div{
+    align-items: center;
+    margin-left: 10px;
+}
+@media (max-width: 575px){
+   
+    img{
+        width: 120%;
+        height: 120px;
+        align-items: center;
+    }
+}

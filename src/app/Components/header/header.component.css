@@ -1,0 +1,18 @@
+.row{
+    background-color: black;
+    width: 100%;
+}
+app-social{
+    float: right;
+    margin-top: 25px;
+}
+
+@media (max-width: 575px){
+   
+    .row{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+  
+}

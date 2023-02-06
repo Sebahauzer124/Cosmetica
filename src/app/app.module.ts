@@ -14,6 +14,10 @@ import { NuevoProductoComponent } from './Components/producto/nuevo-producto/nue
 import { LoginComponent } from './Components/login/login.component';
 import { ProductoComponent } from './Components/producto/producto.component';
 import { interceptorProvider } from './Service/interceptor-service';
+import { BannerComponent } from './Components/banner/banner.component';
+import { HeaderComponent } from './Components/header/header.component';
+import { LogosComponent } from './Components/logos/logos.component';
+import { ObjetivosComponent } from './Components/objetivos/objetivos.component';
 
 
 
@@ -28,7 +32,11 @@ import { interceptorProvider } from './Service/interceptor-service';
     EditarproductoComponent,
     NuevoProductoComponent,
     LoginComponent,
-    ProductoComponent
+    ProductoComponent,
+    BannerComponent,
+    HeaderComponent,
+    LogosComponent,
+    ObjetivosComponent
 
 
  

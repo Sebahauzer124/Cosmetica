@@ -10,7 +10,7 @@ import { Producto } from '../Models/Producto';
 })
 
 export class ProductoService {
-  URL='http://localhost:8080/productos/';
+  URL='https://artilugioscn.onrender.com/productos/';
 
   constructor(private http: HttpClient) { }
 
